@@ -1,0 +1,649 @@
+{
+	"info": {
+		"_postman_id": "d32c302a-3b66-4dd5-8100-a20c9d1dd44d",
+		"name": "multi_auth copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "leen4",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "le727@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "leen123",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "leen123",
+									"type": "text"
+								},
+								{
+									"key": "phone_num",
+									"value": "0976825787",
+									"type": "text"
+								},
+								{
+									"key": "wallet",
+									"value": "5007",
+									"type": "text"
+								},
+								{
+									"key": "is_expert",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "yuta@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "leen123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/login? email=leen8@gmail.com&password=leen123",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": " email",
+									"value": "leen8@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "leen123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMjBjM2UxYTJmYzY4M2QzYTkxYmE3MjFlYmEwYWJjYWNhM2NlNTY1NTFmM2RlODZlZjljNjQ4MTY4YzgyNzFlYzNjMWE1Njg4ZmJjYTc1MWQiLCJpYXQiOjE2NzE5OTk1MTUuNjIwMTIxLCJuYmYiOjE2NzE5OTk1MTUuNjIwMTIzLCJleHAiOjE3MDM1MzU1MTUuNjE2NjgsInN1YiI6IjEwIiwic2NvcGVzIjpbInVzZXIiXX0.rOnSr6YzwTTUoFw0hDPuYqbVQEFoK42HqQvwgwYGcY6DcgsFOK8ObLkLz0VP-AFIfGsJow3awZLeRupT1WU_WHffiu7CJ27jpXeYbcIdLyoVg7AQo8Qmc_wRGvpRPpQLB8-Xh2KM6dNXuiZwl1l28Ijars_cg79ahFW0xpANPWyOKraDzDvV8dFMmVJW4yXkTFLI_k97Tgf_CGhknvLEleMuGe8Dl-FlBIQldgiKCZoV8VnjprmMIiSoNYkLxhmvkSlfdufRgjASBnCsVvfbENxpRqK_ZZMXW9eLvzw694ImCGjFOAq6CvMME4M2C9oihpPQIvnxMjMadjse5zHmMwnerXmXL1-0l362ZGyior5tjTNITexJTCJxrcJ6qFX77q9XI2zCYON06M5_Z3QE7g9NilZ0RhsFtfmxBhdI61Yr7bhRkePYze4feKXUqV0hl6RpeaahANYQIe4T27fneEnXMqk-3fkvSAt2WZWt2n0lIoDj7QsTOwOJFuuqOHswsbKHR_BG-7iPSfqqYwvHPMqzRQ8yKb4s8wgmd2cfTQVwEu4V-ioOF4Awb2wC20rH12NEyYtBE4aM4omQbl3P-TGVzxS2_BInOAFvf9sXNLmy9ZgMEj_-CtWe5LaX-AsoX7BaBa6zVbKNlFO-lZnEJvjWt6cz3mZuKI2MrDEHJEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Expert",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"expert_name\":\"leen\",\r\n    \"email\":\"ll484485839473@gmail.com\",\r\n    \"password\":\"leen\",\r\n    \"c_password\":\"leen\",\r\n    \"phone_num\":274663959,\r\n    \"wallet\":500,\r\n    \"details\":\"fhfhjfjj\",\r\n    \"consulPrice\":50.5,\r\n    \"cosultations\":[1,2,3],\r\n    \"From\":\"2023-1-1 1:34\",\r\n    \"To\":\"2023-1-1 8:34\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/expert/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"expert",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiNzRkM2Y1ODg3MmQzY2YyM2Q1MjAzMzhmMzk5Mzk3MjBiMmViNjdlZTkwMGI3MDY4OTM4NWQ5NjE3NzcxYjNlMWMyNjFmMzYwNzFlZGVmNmEiLCJpYXQiOjE2NzA3MDkxNjMuMTg3OTc1LCJuYmYiOjE2NzA3MDkxNjMuMTg3OTgsImV4cCI6MTcwMjI0NTE2My4xODA4Nywic3ViIjoiMjIiLCJzY29wZXMiOlsiZXhwZXJ0Il19.rjfehL7vKWG4hb4VgohLX2vgupytVNA8Q6Oxm6dL4oT-Ho5XfacWwR3zH1iHP6o-i00vAQ8JhyG9whYMyoQiPD2w8Z4sjnT99sJmmcERYgpjlRgiSlNa1LjeBm2jCKek6uLV-zdLtvWoda9pdQX1788u8N4TK0E16O0_AUTIZJVYQdxRIdvYVjdHGkdRv0vPmmfvuNrU2mm4VqpiyKYX4zxyN_r-TFQsH0Dqbd3baBQdl7Hyr3r9v3qtJdpA5_0HesMQCHJ0y6qOKWl4PCLj5hVdHoByjWASzWiDqraIKnVxl-moxVT8aENpWmYK1Dz6ErTsNqCOQ_zqfBQzKWBI-A3z2LtRGNgRUcj4dI3oCzNwz2WZiLeGyydEU3obp6melpL7aD7Myjmdbjnho-S2Pw5c48U5Ru1A2N49mwkT4sI8_pPJWEMcYoKMQ1a9tbYm4yGlf9ztP2Y6Dlv9EOQdBeOZJlU3faImTXfXwhxBbjnFrfPYOUV6Hp8RDafPyVEUA3B4DLECG_JbQnrmRwMkG3gxii2wfBlT9tn-JcI9mfwOiumo-VnqN83MweyQVYVKU-rgwdoDj2eM60EUuFbCCuoXI-Pa_8EQCStWQm1-qdKH0EtlIHSDuB7J3OL0GK-RAvVfnxvi0gatGSxow0CsAvWiE9W5XJ6TYKDWTrF5dgM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "leen555@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "leen14",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/expert/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"expert",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI3IiwianRpIjoiZmZmYTBlNDNiN2E2OTczZjdlYTFhYTRiZDIwZjA4MDQxOWI4NDQ4MWRmNjIzMDIwZDczMDQ2MmIzMzg0ZWRlY2I0NmRjYjI5M2ZkNmIyNWUiLCJpYXQiOjE2NzA3MTAwMzUuNjE5NzQ0LCJuYmYiOjE2NzA3MTAwMzUuNjE5NzQ4LCJleHAiOjE3MDIyNDYwMzUuNTc0NDQ0LCJzdWIiOiIyMiIsInNjb3BlcyI6WyJleHBlcnQiXX0.aBoNnqN1Wjc-9pSmevCjrLQhiGt8jv2Umi4hFo2Fj2LNEo8y83tH5-OObOmdq2WPIHK_Sde9EzaWF8cyzAXfzmagCDpprXVXcoToQlgNPaiVFfwbx2sRyu6YrwN-UfP-9eEAxYyZZYUakwgGoYw3IrBLhnMEdTXF7QTqsdSBFXOXv9nZ4EsquhPxxyYreZQw7rpjmJ69WpjZQOhIQFP-iFr_MMgR-jwbbMGQ3bbB3aJIRAF6O8o2szZBOFryGgMVZt1VPH12nmrre1CfBwRPvudmx5oUq07XTvQIYkn8JQK-XbxVVnJ60IYFWGDjOach_DKWm1ajQsENPTAODOh7zpwdTHmnT8agnbcZF0NjJr4LJ02pGNoP0hgs_ivQrBe9D6AZVoLMjir0a4ZGHg5H5kUQmePx8ApPfi1mAtKeVz5xkBWqSJ8dgOgY70NO9MhRa9DNbNtncVWw50Thp2_rmOqwnf70HlKos7jXnqqYU9Za394ZBAONKdVeL1j7pncszeMnyf293v3PohUZOKZI3oUqs96yWZgS7AlfzPp_60L-ns7ISHpcvYL5AFdVcDyF_iHZietccmtnaW7hSrm5MAIWOrv3s5RcjU8r5iiM1M1ZMV_1LwBjz5uqD0C2HyAoApai7oWadOjVzFDkqUDrhiOjv7qY_m8MuR_gTeHU_p8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/expert/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"expert",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show expert Details by id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/expert/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"expert",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get expert by name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/experts/leen",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"experts",
+								"leen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all experts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/experts",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"experts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_availble_time",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDA1OGM3NmY3Yzg1OTQ4YTU2YjE5MWY4OWJlNDM1NTliOGMxYjc3YjdiZjFmNzUyNWZjMTQyYzFmZDU4OTExYWYwODQyMjk1ZmZmZDRmN2EiLCJpYXQiOjE2NzMxMjkyNjMuNDE0NDA1LCJuYmYiOjE2NzMxMjkyNjMuNDE0NDA5LCJleHAiOjE3MDQ2NjUyNjMuMzY4OTM1LCJzdWIiOiIxMCIsInNjb3BlcyI6WyJleHBlcnQiXX0.A7pwCU48W1r0gPridoigsAmuELjTBG6N7JPcAUq6Oej9iTPLbtbyYD66D1bjJ1aG1LiUGhymDvDVGzHz0LMy5HuzlOhfGHPp1ZtKj-1GDJjbRchvwgu0CKFo2fgJSRH5MP7yc7yXBK9CaZFj9grF4BnipUu1I_2OYmBF90dN_VmjOBtyZyiPRanhXzItfrteR7L6lcSLEGm_XQs_iAMn5N_9qR-g3ckWxpvwdDyziQF_TV4dSfhqJYafqOJNPx0EHTdV1pNKs_WkeP7Kt_be0q8GLUnYTEsXxqc1A8C8l47PZjf5wikop7M2k_fGHHj_86D7-ZDZTIl5mtnNfSHFlKylMINkaAaGsDiU6dKlaCHj_4XV8kMdHhktML3gRAm7zN6mgvXrXEuUvQGWbcd1bom28qYYWnid1AhsjOrdt8UP9x64OqEhTip7vCBIJmSP7rF-xXTnDuJt3BBSZd3I4KSAtMT7-z3napmG0_EXE68pBI23P_G09yfaIRWnKNiuFXHME9VygvjqQGZGRbXoP7IfaDXXblqoHjv07RMmUuaRoPwsWSSKA5vI3K_dujfmiXMg1lO3Lxe0nmRfIx7zJGWxabqQwlV0qZZjGNI09xnfQY9yxnUFACQdwgQWBuyocXgBSUM1eqNngI1BkwGblimINyCYSEfSfROeqUpVYuY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "From",
+									"value": "2023-1-1 5:34",
+									"type": "text"
+								},
+								{
+									"key": "To",
+									"value": "2023-1-1 9:34",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/get_available_time",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_available_time"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "consultations",
+			"item": [
+				{
+					"name": "show all consultations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/home/consult",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"home",
+								"consult"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get consult by name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Family counseling",
+									"type": "default"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/consult",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"consult"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_consults_with_experts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8000/api/consult/id",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"consult",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get consult by id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/consult_id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"consult_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTJhYzQ0OGQ0ZWRhNzRhMDU1MmFiMGUxNGFkNTI5MzA0ZmM0MTc2NWFiMjkyMGI0YTEwNTg5N2EyODkxMTk2MWI5ZWJjYjVhNGU5YjBiNjIiLCJpYXQiOjE2NzMxNTQxMzQuOTExNTU0LCJuYmYiOjE2NzMxNTQxMzQuOTExNTU2LCJleHAiOjE3MDQ2OTAxMzQuOTA3ODA4LCJzdWIiOiIxIiwic2NvcGVzIjpbInVzZXIiXX0.nSWhIgGV39PWqHXIXgz1SuINlWVPjWt5WRfvGRPlgDSnpOy95aFpejuCu0xkiskZCtpwyCrWJ1x6qOuzB5CJAdzG8n4lLuWTwNKeaIchfrJeCftrJEjH5iPNnYTGSV-aQhPoLZScykrAjftuBG8m4uLYJ1oOY9V0AVqFBesE4iUEgSRPin-ic9v8ed3fDRBM90RJwvwGDtmZLbPwppLts8orPomnT9koC4-Rlj1zvmBLPwf4-xG9df03nSntq751KEk76y83-a08rihlAiSC27j87joaLuqfc4Y4n-TrV4Ptlb_HBYGmh80sosHBKmqV3CVaO5Xa10AZKZHJH1pY8S7qAwmMYGf-Ge_VOWGGp1Umnkniiq9SQtpuG_Q33GuZDaHbj1V9I3YpGl7E1EtDPse472ix26uDuT8-a-CzKcI80__gP91JZEiG9_8AXF76PXRHsABVxQXjIDuLUsjqSPLSXYR9y1zE6dI7_YyYGM3YjLUIs45y3ViIYiVdmlOT6yg7v9xM5ztax0ZCWA1XyRFQElVwhDNYLe30Fu86ATRpC1IiZYAvuE2RqbFBb_jZ806De6fiM61OimuOnhgF7F0cxiJkIzqAACP93RkI5jsGxyXoUiw-8aGJ27GBetRNr8vjxMj7e3i0eCaqs8_918e0exxooRdrQg4hvHhS2OA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "expert_id",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "from",
+									"value": "2023-01-01 07:34:00",
+									"type": "text"
+								},
+								{
+									"key": "to",
+									"value": "2023-01-01 07:50:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/booking",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_bookings for user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get_AvailableTime_Expert/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_AvailableTime_Expert",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_booking_expert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/get_booking_expert/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"get_booking_expert",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Favorite",
+			"item": [
+				{
+					"name": "favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTJhYzQ0OGQ0ZWRhNzRhMDU1MmFiMGUxNGFkNTI5MzA0ZmM0MTc2NWFiMjkyMGI0YTEwNTg5N2EyODkxMTk2MWI5ZWJjYjVhNGU5YjBiNjIiLCJpYXQiOjE2NzMxNTQxMzQuOTExNTU0LCJuYmYiOjE2NzMxNTQxMzQuOTExNTU2LCJleHAiOjE3MDQ2OTAxMzQuOTA3ODA4LCJzdWIiOiIxIiwic2NvcGVzIjpbInVzZXIiXX0.nSWhIgGV39PWqHXIXgz1SuINlWVPjWt5WRfvGRPlgDSnpOy95aFpejuCu0xkiskZCtpwyCrWJ1x6qOuzB5CJAdzG8n4lLuWTwNKeaIchfrJeCftrJEjH5iPNnYTGSV-aQhPoLZScykrAjftuBG8m4uLYJ1oOY9V0AVqFBesE4iUEgSRPin-ic9v8ed3fDRBM90RJwvwGDtmZLbPwppLts8orPomnT9koC4-Rlj1zvmBLPwf4-xG9df03nSntq751KEk76y83-a08rihlAiSC27j87joaLuqfc4Y4n-TrV4Ptlb_HBYGmh80sosHBKmqV3CVaO5Xa10AZKZHJH1pY8S7qAwmMYGf-Ge_VOWGGp1Umnkniiq9SQtpuG_Q33GuZDaHbj1V9I3YpGl7E1EtDPse472ix26uDuT8-a-CzKcI80__gP91JZEiG9_8AXF76PXRHsABVxQXjIDuLUsjqSPLSXYR9y1zE6dI7_YyYGM3YjLUIs45y3ViIYiVdmlOT6yg7v9xM5ztax0ZCWA1XyRFQElVwhDNYLe30Fu86ATRpC1IiZYAvuE2RqbFBb_jZ806De6fiM61OimuOnhgF7F0cxiJkIzqAACP93RkI5jsGxyXoUiw-8aGJ27GBetRNr8vjxMj7e3i0eCaqs8_918e0exxooRdrQg4hvHhS2OA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "expert_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/favorite",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"favorite"
+							],
+							"query": [
+								{
+									"key": "expert_id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

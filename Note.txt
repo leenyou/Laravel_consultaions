@@ -1,0 +1,8 @@
+
+php artisan passport:install
+
+
+Refresh database
+php artisan migrate
+php artisan passport:install
+
